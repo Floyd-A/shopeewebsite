@@ -1,0 +1,131 @@
+*{
+   padding: 0; 
+   margin: 0;
+   font-family: sans-serif;
+   font-size: 16px;
+   box-sizing: border-box;
+}
+
+/* Box-sizing - sets the total width and height of the page */
+
+/*
+hex - #ffffff
+name - white
+rgb - rgb(0,0,0)
+*/
+
+.nav{
+   background-color: #ee4d2d;
+   height: 50px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   color: white;
+   padding-inline: 30px;
+   /* padding-right and padding-left */
+}
+
+body {
+   background-color: rgb(247, 247, 247);
+}
+
+.shopee-header {
+   font-size: 1.8rem;
+}
+
+.shopee-logo, .right {
+   display: none;
+}
+
+.products {
+   max-width: 80%;
+   margin: 0 auto;
+   display:  grid;
+   gap: 1rem; 
+}
+
+.item {
+   background-color: white;
+   color: black;
+   padding: 1rem;
+   height: auto;
+   margin-top: 30px;
+   border: 1px solid gray;
+}
+
+.product-image {
+   display: block;
+   margin-inline: auto;
+   /* margin-right and margin-left */
+   width: 50%;
+}
+
+.description {
+   padding-left: 1rem;
+}
+
+footer {
+   margin-top: 5%;
+   height: auto;
+   background-color: #eeeeee;
+   padding: 20px;
+   text-align: center;
+}
+
+.links {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+a {
+   color: orangered;
+   text-decoration: none;
+}
+
+.links span {
+   margin: 10px;
+}
+
+@media only screen and (min-width: 768px){
+   .shopee-header {
+      display: none;
+   }
+
+   .shopee-logo {
+      display: block;
+      max-width: 100px;
+   }
+
+   .right {
+      display: flex;
+      gap: 27px;
+   }
+
+   /* hover is a pseudo-class - built-in classes that we can use to style our elements */
+   p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+   }
+
+   .products {
+      max-width: 75%;
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: repeat(2, 1fr) */
+   }
+}
+
+@media only screen and (min-width: 1024px){
+   .products {
+      max-width: 75%;
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-columns: 1fr 1fr 1fr; */
+   }
+}
+
+/*
+   text-align: center;
+   left
+   right
+*/   
